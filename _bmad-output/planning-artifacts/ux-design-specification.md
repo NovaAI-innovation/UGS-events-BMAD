@@ -108,37 +108,62 @@ The platform's core philosophy centers on community ownership: events are propos
 
 ### Design Opportunities
 
-1. **Feed-Inspired Discovery with Stories Pattern (Phased)**
-   - Phase 1: Visual feed-style layout with traditional scrolling, horizontal Stories-style previews (swipe through event highlights before committing)
-   - Phase 2: Progressive enhancement with swipe gestures for feed navigation (optional, after validation)
+1. **Feed-Inspired Discovery with Utility-Focused Stories Pattern (Phased with Onboarding)**
+   - Phase 1: Visual feed-style layout with traditional scrolling, horizontal Stories-style previews with genuine utility (exclusive content, behind-the-scenes, artist interviews)
+   - Phase 2: Progressive enhancement with swipe gestures for feed navigation (optional, after validation through analytics)
    - Visual-first event cards with Stories preview overlay (tap card to see Stories-style highlights)
-   - Show friend activity, trending events, and "happening now" prominently in feed layout
+   - Show friend activity, trending events, and "happening now" prominently in feed layout with easy switching to "upcoming" view
    - Skeleton screens during loading (show card structure, not spinners)
+   - Onboarding overlays explaining Stories pattern on first use
+   - Content guidelines ensuring Stories provide genuine value, not just promotional material
 
-2. **Bottom Sheet + Modal Hybrid System**
+2. **Bottom Sheet + Modal Hybrid System with Smart Sticky Behavior**
    - Bottom sheet for critical actions (ticket selection cart, engagement actions, universal action panel)
    - Overlay modals for detailed views (event details, full community discussion)
-   - Sticky bottom action bar with "Join Event" always visible (thumb-zone optimized)
+   - Smart sticky bottom action bar: Hide on scroll down, show on scroll up (or collapsible/minimizable) to balance accessibility with content visibility
    - Cart-style ticket selection (familiar shopping pattern, not form-based)
    - Smooth bottom sheet animations (native mobile app feel)
    - Browser history integration for bottom sheet back-button support
+   - Clear visual cues and onboarding tutorials for first-time users encountering bottom sheet patterns
 
-3. **Community-Centered Visual Hierarchy (Achievable Through Design)**
-   - Reverse discovery flow: "what's happening now" first (live/upcoming events prioritized)
+3. **Community-Centered Visual Hierarchy with Smart Curation and Balanced Discovery**
+   - Smart default: "what's happening now" first for discovery/impulse, with prominent filter/tab to switch to "upcoming" for planning
+   - Clear visual distinction between live/now vs upcoming events
    - Magnified social proof: friend activity, trending events, limited tickets prominently displayed
    - Community actions accessible from universal bottom sheet (integrated, not separate)
-   - Community impact visualization prominently displayed (data-driven design)
+   - Community impact visualization prominently displayed (data-driven design showing real examples of community input shaping outcomes)
    - Past events in feed drive future discovery (content marketing integration)
+   - Intelligent filtering and curation to prevent information overload—elegant filtering, sorting, personalization controls
+   - Balanced discovery: Mix community recommendations with algorithmic diversity, "discover something new" prompts, serendipity features, cross-community trending sections
+   - UX patterns encouraging exploration beyond recommendations (random discovery, diversity indicators, "trending in other communities")
 
-4. **Stories Pattern for Event Previews**
-   - Horizontal swipe through event "stories" (highlights, performers, fashion, vibe)
+4. **Stories Pattern for Event Previews with Content Strategy**
+   - Horizontal swipe through event "stories" with focus on utility: exclusive content, behind-the-scenes, artist interviews, performer Q&As, community member spotlights
    - Stories accessible from event cards (tap to preview, swipe to explore)
    - Stories become marketing content (past events' Stories drive future discovery)
    - Familiar Instagram pattern adapted for event discovery
+   - Content guidelines ensuring Stories provide genuine value: behind-the-scenes footage, exclusive artist content, community spotlights, event preparation content—not just promotional highlights
+   - Content strategy as important as UI pattern—need guidelines for what makes Stories valuable
 
-5. **Performance-Optimized with Skeleton Screens**
-   - Skeleton screens during loading (show structure, not spinners)
+5. **Performance-Optimized with Skeleton Screens and Progressive Enhancement**
+   - Skeleton screens during loading (show structure, not spinners) creating perceived performance
    - Virtual scrolling for feed with many events (performance optimization)
-   - Progressive enhancement: start traditional, enhance with Stories and swipe gestures
-   - Fast initial load with skeleton screens creating perceived performance
+   - Progressive enhancement strategy: Load core content first (< 3s target), enhance with richer content/animations after initial render
+   - Performance budget per page/section—prioritize critical path (discovery → ticket purchase), defer non-critical enhancements
+   - Fast initial load with skeleton screens maintaining perceived performance even if full content takes longer
+   - Performance targets: < 3 seconds on 4G for initial render, progressive enhancement for richer content
+
+6. **Desktop Experience Excellence with Adapted Interaction Patterns**
+   - Mobile-first foundation with excellent desktop experience through layout adaptations (multi-column layouts, side-by-side comparisons)
+   - Different interaction patterns for desktop: Hover states, keyboard shortcuts, right-click context menus, advanced filtering panels
+   - Desktop-specific features: Multi-window workflows, advanced search, comparison views
+   - Responsive design that adapts interaction patterns per device type, not just scales layout
+   - Maintain mobile-first core while providing desktop users with optimized, feature-rich experience
+
+7. **Community Impact Visualization as Competitive Differentiator**
+   - Visible examples of community recommendations implemented (show artist on lineup that was community-recommended)
+   - Votes that changed lineups (show before/after, highlight community influence)
+   - Proposals that became events (show proposal → event creation story)
+   - Community impact metrics prominently displayed (XX% of artists community-recommended, XX events from community proposals)
+   - Real-time feedback loops showing community input shaping outcomes (not just collecting feedback)
 
